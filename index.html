@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>desarrollo web entorno cliente</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color: black;
+            color: #00FF00;
+            font-family: monospace;
+            font-size: 16px;
+        }
+
+        h1,
+        h2 {
+            margin-left: 10px;
+            color: #FFFFFF;
+            font-weight: normal;
+        }
+
+        #head {
+            margin-right: 10px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .home,
+        .doc,
+        .git {
+            margin-top: 10px;
+            width: 100px;
+        }
+
+        p {
+            margin-left: 10px;
+        }
+
+        button {
+            margin-left: 10px;
+            padding: 5px;
+            border: 1px solid #006400;
+            background-color: #006400;
+            color: #00FF00;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #006400;
+            color: #00FF00;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="head">
+        <button class="doc" onclick="goDoc()">doc</button>
+        <button class="git" onclick="goGit()">git</button>
+        <button class="home" onclick="goHome()">back</button>
+    </div>
+    <h1>arrays and iterative control structures in javaScript</h1>
+    <h2>sergio lópez</h2>
+
+    <!-- crear varios elementos <p> donde se muestran los resultados de los bucles -->
+    <p id="data01"></p>
+    <p id="data02"></p>
+    <p id="data03"></p>
+    <p id="data04"></p>
+    <p id="data05"></p>
+
+    <script>
+        // declaracion de array
+        var fichAlumno = ["sergio", "lópez", "DWEC", "DAW", "FOC", 12];
+        // declaracion de array
+        var etiquetas = ["Nombre", "Apellido", "Módulo", "Ciclo", "Centro", "Resultado"];
+        // declaracion de variable
+        var i;
+
+        // obtencion del elemento con id "data01" y almacenado en variable data01
+        var data01 = document.getElementById("data01");
+        // bucle for para recorrer los arrays y mostrar los datos
+        for (i = 0; i < etiquetas.length; i++) {
+            data01.innerHTML += etiquetas[i] + ": " + fichAlumno[i] + "<br>";
+        }
+
+        // obtencion del elemento con id "data02" y almacenado en variable data02
+        var data02 = document.getElementById("data02");
+        // bucle while para recorrer los arrays y mostrar los datos
+        i = 0;
+        while (i < etiquetas.length) {
+            data02.innerHTML += etiquetas[i] + ": " + fichAlumno[i] + "<br>";
+            i++;
+        }
+
+        // obtencion del elemento con id "data03" y almacenado en variable data03
+        var data03 = document.getElementById("data03");
+        // bucle do-while para recorrer los arrays y mostrar los datos
+        i = 0;
+        do {
+            data03.innerHTML += etiquetas[i] + ": " + fichAlumno[i] + "<br>";
+            i++;
+        } while (i < etiquetas.length);
+
+        // obtencion del elemento con id "data04" y almacenado en variable data04
+        var data04 = document.getElementById("data04");
+        // mostrar el tipo de dato de fichAlumno[7]
+        data04.innerHTML = "value type: " + typeof fichAlumno[5];
+
+        // obtencion del elemento con id "data05" y almacenado en variable data05
+        var data05 = document.getElementById("data05");
+        // bucle for para mostrar solo los datos de las posiciones pares del array
+        for (i = 0; i < etiquetas.length; i++) {
+            if (i % 2 === 0) {
+                data05.innerHTML += etiquetas[i] + ": " + fichAlumno[i] + "<br>";
+            }
+        }
+
+        function goHome() {
+
+            window.location.href = '/';
+
+        }
+
+        function goGit() {
+
+            window.location.href = 'https://github.com/s7rg77/arrays-and-iterative-control-structures-in-javaScript';
+
+        }
+
+        function goDoc() {
+
+            window.location.href = '/doc';
+
+        }
+    </script>
+</body>
+
+<footer>
+    <h3>desarrollo web entorno cliente</h3>
+</footer>
+
+</html>
