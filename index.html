@@ -6,9 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>arrays and iterative control structures in javaScript</title>
     <style>
+        html,
         body {
             margin: 0px;
             padding: 0px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body {
             background-color: black;
             color: #00FF00;
             font-family: monospace;
@@ -22,16 +29,20 @@
             font-weight: normal;
         }
 
-        #head {
+        header {
+            margin-top: 10px;
             margin-right: 10px;
             display: flex;
             justify-content: flex-end;
         }
 
+        main {
+            flex: 1;
+        }
+
         .home,
         .doc,
         .git {
-            margin-top: 10px;
             width: 100px;
         }
 
@@ -49,31 +60,36 @@
         }
 
         footer {
-            bottom: 0px;
             width: 100%;
             background-color: #006400;
             color: #00FF00;
             text-align: center;
-            position: fixed;
         }
     </style>
 </head>
 
 <body>
-    <div id="head">
+    <header>
         <button class="doc" onclick="goDoc()">doc</button>
         <button class="git" onclick="goGit()">git</button>
         <button class="home" onclick="goHome()">back</button>
-    </div>
-    <h1>arrays and iterative control structures in javaScript</h1>
-    <h2>sergio lópez</h2>
+    </header>
 
-    <!-- crear varios elementos <p> donde se muestran los resultados de los bucles -->
-    <p id="data01"></p>
-    <p id="data02"></p>
-    <p id="data03"></p>
-    <p id="data04"></p>
-    <p id="data05"></p>
+    <main>
+        <h1>arrays and iterative control structures in javaScript</h1>
+        <h2>sergio lópez</h2>
+
+        <!-- crear varios elementos <p> donde se muestran los resultados de los bucles -->
+        <p id="data01"></p>
+        <p id="data02"></p>
+        <p id="data03"></p>
+        <p id="data04"></p>
+        <p id="data05"></p>
+    </main>
+
+    <footer>
+        <h3>desarrollo web entorno cliente</h3>
+    </footer>
 
     <script>
         // declaracion de array
@@ -141,9 +157,5 @@
         }
     </script>
 </body>
-
-<footer>
-    <h3>desarrollo web entorno cliente</h3>
-</footer>
 
 </html>
